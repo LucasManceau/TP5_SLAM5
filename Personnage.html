@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+    let myJSON = '{"nom" : "Klad","classe" : "guerrier","age" : 28, "armes" : ["épée", "bouclier", "baton"]  }';
+    let myNewJSON = JSON.parse(myJSON);
+    // logs a JavaScript object, not a string
+    console.log(myNewJSON);
+
+    console.log(myNewJSON.nom); 
+    console.log(myNewJSON.classe); 
+    console.log(myNewJSON.age); 
+    console.log(myNewJSON.armes);
+
+        let body = document.body;
+        let newArmes = document.createElement('p');
+        let newNom = document.createElement('p');
+        let newAge = document.createElement('p');
+        let newClasse = document.createElement('p');
+
+        newNom.textContent = myNewJSON.nom;
+        newClasse.textContent = myNewJSON.classe;
+        newAge.textContent = myNewJSON.age;
+        newArmes.textContent = myNewJSON.armes;
+
+        body.prepend(newNom);
+        body.prepend(newAge);
+        body.prepend(newClasse);
+        body.prepend(newArmes);
+
+    </script>
+</body>
+</html>
